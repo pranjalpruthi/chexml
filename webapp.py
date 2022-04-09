@@ -16,9 +16,23 @@ def loading_model():
   return model_loader
 
 cnn = loading_model()
+######################
+# Page Title
+######################
+components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=700, height=400)
+
+
+
 st.write("""
-# X-Ray Classification (Pneumonia/Normal)
+# X-Ray Classification (Pneumonia/Normal) 
+#Beta
+
+This app counts the disease probability of query CXR(Chest XRay Scan-Frontal)!
+
+***
 """)
+
+
 
 
 
