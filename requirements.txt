@@ -3,3 +3,4 @@ pillow
 numpy
 h5py
 streamlit
+streamlit-lottie

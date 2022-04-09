@@ -19,7 +19,12 @@ cnn = loading_model()
 ######################
 # Page Title
 ######################
-components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=700, height=400)
+st.sidebar.title("CheX2")
+st.sidebar.subheader("Pneumonia Detection")
+st.sidebar.markdown("---")
+
+components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=200, height=200)
+
 
 
 
