@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image 
 from tensorflow.keras.models import load_model
 import tensorflow as tf
- 
+import streamlit.components.v1 as components 
 from tempfile import NamedTemporaryFile
 from tensorflow.keras.preprocessing import image 
 
