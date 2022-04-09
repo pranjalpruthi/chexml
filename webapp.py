@@ -23,7 +23,7 @@ st.sidebar.title("CheX2")
 st.sidebar.subheader("Pneumonia Detection")
 st.sidebar.markdown("---")
 
-components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=200, height=200)
+components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=320, height=576)
 
 
 
