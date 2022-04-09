@@ -47,7 +47,7 @@ lottie_t1 = load_lottieurl(lottie_url_t1)
 
 ##lottie###
 with st.sidebar:
-  st_lottie(lottie_t1)
+  st_lottie(lottie_t1, width=199, height=150)
 
 st.sidebar.title("CheXM")
 st.sidebar.subheader("Pneumonia Detection")
@@ -58,10 +58,18 @@ st.sidebar.image("https://img.shields.io/badge/CheXM-v1.0-green.svg", width=100)
 components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=200, height=200)
 
 st.sidebar.subheader("About")
-st.sidebar.markdown("CheXM is a deep learning model  , It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. It consists of 2 categories, Pneumonia and Normal. This dataset was published by Paulo Breviglieri, a revised version of Paul Mooney's most popular dataset. databases. The model is trained 2 Classes CXR X-ray images.")
+st.sidebar.markdown("CheXM is a deep learning model, It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. It consists of 2 categories, Pneumonia and Normal. This dataset was published by Paulo Breviglieri, a revised version of Paul Mooney's most popular dataset. databases. The model is trained 2 Classes CXR X-ray images.")
 st.sidebar.markdown("---")
+
+st.sidebar.markdown ("Credits: This Model is a fork of [Hardik's X-ray ⚕️ Classifier](https://github.com/smarthardik10/Xray-classifier) ")
+
 st.sidebar.image("https://img.shields.io/badge/Version-Beta-orange.svg")
 #st.sidebar.markdown("CheX2 is a deep learning model developed by Pranjal Pruthi. It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. The model is trained on the Chest X-ray images of the American Heart Association (AHA) and the International Chest Imaging Conference (ICIC) databases. The model is trained on the following modalities: CT, MRI, PET, and X-ray.")
+
+
+st.sidebar.markdown(
+        "[![this is pranjal's kofi link](https://i.imgur.com/XnWftZ9.png)](https://ko-fi.com/pranjalpruthi)"
+    )
 
 ####lottie logo####
 
