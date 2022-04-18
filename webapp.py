@@ -10,8 +10,8 @@ from streamlit_lottie import st_lottie_spinner
 #####LOTTIE####
 
 #####imagegrid######
-from streamlit_imagegrid import streamlit_imagegrid
-import requests
+import streamlit_imagegrid
+from streamlit_imagegrid import requests
 from io import BytesIO
 
 ######imagegrid#####
