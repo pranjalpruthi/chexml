@@ -10,9 +10,7 @@ from streamlit_lottie import st_lottie_spinner
 #####LOTTIE####
 
 #####imagegrid######
-import streamlit_imagegrid
-from streamlit_imagegrid import requests
-from io import BytesIO
+
 
 ######imagegrid#####
 
@@ -141,32 +139,8 @@ else:
 
 ####imagegrid####
 st.title('Image grid test')
-zoom_val = st.sidebar.slider('Zoom',40,240)
-
-urls = [
-        {
-          "width": 1000,
-          "height": 666,
-          "src": "https://as2.ftcdn.net/jpg/02/25/53/52/1000_F_225535263_n14yO9cXk18X90qQYxBf5Vcf00uOtAhW.jpg"
-        },
-        {
-          "width": 1000,
-          "height": 422,
-          "src": "https://as2.ftcdn.net/jpg/02/81/07/83/1000_F_281078312_PcISs3yKL9r70nCqvDkgOR17UBGIw97C.jpg"
-        },
-        {
-          "width": 1000,
-          "height": 666,
-          "src": "https://as2.ftcdn.net/jpg/02/96/35/64/1000_F_296356423_f6IEidPVRWzaqj2MJQ2VLJJTYGRAtY4P.jpg"
-        }
-      ]
-
-return_value = streamlit_imagegrid(urls=urls,height=1000)
 
 
-if return_value is not None:
-    response = requests.get(return_value)
-    st.sidebar.markdown('<img src={} width=240px></img>'.format(return_value),unsafe_allow_html=True)
 #######################  
 
   
