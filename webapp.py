@@ -94,6 +94,7 @@ This app counts the disease probability of query CXR(Chest XRay Scan-Frontal)!
 
 ***
 """)
+st.image("https://img.shields.io/badge/Version-Alpha-orange.svg")
 
 
   
