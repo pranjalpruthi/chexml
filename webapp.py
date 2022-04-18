@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
+
 ####LOTTIE####
 import time
 import requests
@@ -8,11 +9,18 @@ from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 #####LOTTIE####
 
+#####imagegrid######
+from streamlit_imagegrid import streamlit_imagegrid
+import requests
+from io import BytesIO
+
+######imagegrid#####
+
 import numpy as np
 from PIL import Image 
 from tensorflow.keras.models import load_model
 import tensorflow as tf
- 
+
 from tempfile import NamedTemporaryFile
 from tensorflow.keras.preprocessing import image 
 
@@ -91,7 +99,7 @@ This app counts the disease probability of query CXR(Chest XRay Scan-Frontal)!
 
 
   
-
+######Uploader########
 
 temp = st.file_uploader("Upload X-Ray Image")
 
@@ -103,7 +111,7 @@ if buffer:
 
 
 if buffer is None:
-  st.text("Oops! that doesn't look like an image. Try again.")
+  st.text("Oops! that doesn't look like an image. Try again, or dragndrop from examples below ")
 
 else:
 
@@ -131,6 +139,34 @@ else:
           
             
 
-  
+####imagegrid####
+st.title('Image grid test')
+zoom_val = st.sidebar.slider('Zoom',40,240)
+
+urls = [
+        {
+          "width": 1000,
+          "height": 666,
+          "src": "https://as2.ftcdn.net/jpg/02/25/53/52/1000_F_225535263_n14yO9cXk18X90qQYxBf5Vcf00uOtAhW.jpg"
+        },
+        {
+          "width": 1000,
+          "height": 422,
+          "src": "https://as2.ftcdn.net/jpg/02/81/07/83/1000_F_281078312_PcISs3yKL9r70nCqvDkgOR17UBGIw97C.jpg"
+        },
+        {
+          "width": 1000,
+          "height": 666,
+          "src": "https://as2.ftcdn.net/jpg/02/96/35/64/1000_F_296356423_f6IEidPVRWzaqj2MJQ2VLJJTYGRAtY4P.jpg"
+        }
+      ]
+
+return_value = streamlit_imagegrid(urls=just_urls,zoom=zoom,height=1000)
+
+
+if return_value is not None:
+    response = requests.get(return_value)
+    st.sidebar.markdown('<img src={} width=240px></img>'.format(return_value),unsafe_allow_html=True)
+#######################  
 
   
