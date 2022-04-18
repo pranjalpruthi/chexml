@@ -138,8 +138,8 @@ else:
             
 
 ####imagegrid####
-st.title('Drag and Drop examples to test')
-st.image("https://production-media.paperswithcode.com/datasets/MIMIC-CXR-0000002919-5d6519da_0miLqPx.jpg/")
+st.subheader('Drag and Drop examples to test')
+st.image("https://production-media.paperswithcode.com/datasets/MIMIC-CXR-0000002919-5d6519da_0miLqPx.jpg")
 
 #######################  
 
