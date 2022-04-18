@@ -95,12 +95,13 @@ with st.sidebar:
 st.write("""
 # X-Ray Classification (Pneumonia/Normal) 
 
-This app counts the disease probability of query CXR(Chest XRay Scan-Frontal)!
+This app counts the disease probability of query CXR(Chest XRay Frontal-Scan)!
 
 ***
 """)
 st.image("https://img.shields.io/badge/Version-Alpha-orange.svg")
 
+st.info("""CheXM is a deep learning model.The model is trained on the Chest X-ray images of a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).""")
 
   
 ######Uploader########
