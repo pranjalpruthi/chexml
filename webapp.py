@@ -58,7 +58,7 @@ st.sidebar.image("https://img.shields.io/badge/CheXM-v1.0-green.svg", width=100)
 components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=200, height=200)
 
 st.sidebar.subheader("About")
-st.sidebar.markdown("CheXM is a deep learning model, It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. It consists of 2 categories, Pneumonia and Normal. This tool is based dataset was published by Paulo Breviglieri, a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia). The model is trained 2 Classes CXR X-ray images.")
+st.sidebar.markdown("CheXM is a deep learning model, It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. This model is trained on 2 Classes CXR X-ray images, Pneumonia and Normal. This tool is based dataset was published by [Paulo Breviglieri](https://www.kaggle.com/datasets/pcbreviglieri/pneumonia-xray-images), a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).")
 st.sidebar.markdown("---")
 
 st.sidebar.markdown ("Credits: This Model is a fork of [Hardik's X-ray ⚕️ Classifier](https://github.com/smarthardik10/Xray-classifier) ")
