@@ -109,7 +109,7 @@ if buffer:
 
 
 if buffer is None:
-  st.text("Oops! that doesn't look like an image. Try again, or dragndrop from examples below ")
+  st.text("Oops! that doesn't look like an image. Try again ")
 
 else:
 
@@ -138,8 +138,6 @@ else:
             
 
 ####imagegrid####
-st.subheader('Drag and Drop examples to test')
-st.image("https://production-media.paperswithcode.com/datasets/MIMIC-CXR-0000002919-5d6519da_0miLqPx.jpg", width=200, height=200) 
 
 #######################  
 
