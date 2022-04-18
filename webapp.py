@@ -161,7 +161,7 @@ urls = [
         }
       ]
 
-return_value = streamlit_imagegrid(urls=just_urls,zoom=zoom,height=1000)
+return_value = streamlit_imagegrid(urls=urls,zoom=zoom,height=1000)
 
 
 if return_value is not None:
