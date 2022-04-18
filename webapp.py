@@ -52,19 +52,19 @@ with st.sidebar:
 st.sidebar.title("CheXM")
 st.sidebar.subheader("Pneumonia Detection")
 st.sidebar.markdown("---")
-st.sidebar.subheader("#Beta Version Under Development")
+st.sidebar.subheader("#Aplha Version Under Development")
 st.sidebar.image("https://img.shields.io/badge/CheXM-v1.0-green.svg", width=100)
 
 components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=200, height=200)
 
 st.sidebar.subheader("About")
-st.sidebar.markdown("CheXM is a deep learning model, It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. It consists of 2 categories, Pneumonia and Normal. This dataset was published by Paulo Breviglieri, a revised version of Paul Mooney's most popular dataset. databases. The model is trained 2 Classes CXR X-ray images.")
+st.sidebar.markdown("CheXM is a deep learning model, It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. It consists of 2 categories, Pneumonia and Normal. This tool is based dataset was published by Paulo Breviglieri, a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia). The model is trained 2 Classes CXR X-ray images.")
 st.sidebar.markdown("---")
 
 st.sidebar.markdown ("Credits: This Model is a fork of [Hardik's X-ray ⚕️ Classifier](https://github.com/smarthardik10/Xray-classifier) ")
 
-st.sidebar.image("https://img.shields.io/badge/Version-Beta-orange.svg")
-#st.sidebar.markdown("CheX2 is a deep learning model developed by Pranjal Pruthi. It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. The model is trained on the Chest X-ray images of the American Heart Association (AHA) and the International Chest Imaging Conference (ICIC) databases. The model is trained on the following modalities: CT, MRI, PET, and X-ray.")
+st.sidebar.image("https://img.shields.io/badge/Version-Alpha-orange.svg")
+#st.sidebar.markdown("CheXM is a deep learning model developed by Pranjal Pruthi. It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. The model is trained on the Chest X-ray images of the American Heart Association (AHA) and the International Chest Imaging Conference (ICIC) databases. The model is trained on the following modalities: CT, MRI, PET, and X-ray.")
 
 
 st.sidebar.markdown(
