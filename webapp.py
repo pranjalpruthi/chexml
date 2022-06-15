@@ -58,7 +58,7 @@ with st.sidebar:
 st.sidebar.title("CheXM")
 st.sidebar.subheader("Pneumonia Detection")
 st.sidebar.markdown("---")
-st.sidebar.subheader("#Aplha Version Under Development")
+st.sidebar.subheader("#Alpha Version Under Development")
 st.sidebar.image("https://img.shields.io/badge/CheXM-v1.0-green.svg", width=100)
 
 components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)

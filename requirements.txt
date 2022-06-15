@@ -4,4 +4,3 @@ numpy
 h5py
 streamlit
 streamlit-lottie
-streamlit-on-Hover-tabs
