@@ -105,9 +105,11 @@ This app counts the disease probability of query CXR(Chest XRay Frontal-Scan)!
 
 ***
 """)
+st.info("Click on the 👈 left sidebar menu to navigate to know more. 🧐")
+
 st.image("https://img.shields.io/badge/Version-Alpha-orange.svg")
 
-st.info("""CheXM is a deep learning model.The model is trained on the Chest X-ray images of a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).""")
+st.info("""CheXM is a deep learning model. The model is trained on the Chest X-ray images of a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).""")
 st.info("DOI:https://doi.org/10.1016/j.cell.2018.02.010")
   
 ######Uploader########
