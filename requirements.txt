@@ -4,3 +4,7 @@ numpy
 h5py
 streamlit
 streamlit-lottie
+##########
+torch
+torchvision
+pandas
