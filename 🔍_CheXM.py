@@ -106,7 +106,7 @@ st.info("DOI:https://doi.org/10.1016/j.cell.2018.02.010")
   
 ######Uploader########
 
-temp = st.file_uploader("Upload X-Ray Image")
+temp = st.file_uploader("Upload X-Ray Image 👇 for analysis", type=["jpg", "png","jpeg"])
 
 buffer = temp
 temp_file = NamedTemporaryFile(delete=False)
