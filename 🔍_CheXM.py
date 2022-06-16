@@ -23,7 +23,7 @@ from tempfile import NamedTemporaryFile
 from tensorflow.keras.preprocessing import image 
 
 st.set_page_config(
-        page_title="Hello world",
+        page_title="CheXM (Beta)",
         page_icon="chart_with_upwards_trend",
         layout="wide",
     )
