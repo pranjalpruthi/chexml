@@ -22,11 +22,7 @@ from torchvision import models, transforms
 import streamlit as st
 import torchxrayvision as xrv
 
-from tensorflow.keras.utils import img_to_array
 
-import skimage, skimage.io
-from skimage.io import imread
-from skimage.transform import resize
 
 
 
@@ -68,17 +64,7 @@ def predict(image):
     """
     # create a ResNet model
     model = xrv.models.DenseNet(weights="all")
-    img = skimage.io.imread(file_up)
-    img = xrv.datasets.normalize(img, 255) 
 
-# Check that images are 2D arrays
-    if len(img.shape) > 2:
-        img = img[:, :, 0]
-    if len(img.shape) < 2:
-        print("error, dimension lower than 2 for image")
-
-# Add color channel
-    img = img[None, :, :]
 
 
 
