@@ -63,7 +63,7 @@ def predict(image):
     :return: top 5 predictions ranked by highest probability
     """
     # create a ResNet model
-    resnet =xrv.models.ResNet(weights="resnet50-res512-all")
+    model =xrv.models.ResNet(weights="resnet50-res512-all")
     # transform the input image through resizing, normalization
     transform = transforms.Compose([
         transforms.Resize(512),
@@ -81,8 +81,8 @@ def predict(image):
 
     img = Image.open(image)
     batch_t = torch.unsqueeze(transform(img), 0)
-    resnet.eval()
-    out = resnet(batch_t)
+    model.eval()
+    out = model(batch_t)
 
 
     # return the top 5 predictions ranked by highest probabilities
