@@ -68,7 +68,7 @@ def predict(image):
     """
     # create a ResNet model
     model = xrv.models.DenseNet(weights="all")
-    img = skimage.io.imread(img_path)
+    img = skimage.io.imread(file_up)
     img = xrv.datasets.normalize(img, 255) 
 
 # Check that images are 2D arrays
