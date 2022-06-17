@@ -66,7 +66,8 @@ def predict(image):
     model = xrv.models.DenseNet(weights="all")
 
     # transform the input image through resizing, normalization
-    transform = transforms.Compose([
+    transform = transforms.Compose([    
+        xrv.datasets.XRayCenterCrop(),
         transforms.Resize(512),
         transforms.ToTensor(),
         transforms.Normalize(
