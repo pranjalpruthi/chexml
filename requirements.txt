@@ -8,3 +8,4 @@ streamlit-lottie
 torch
 torchvision
 pandas
+torchxrayvision
