@@ -128,7 +128,7 @@ if buffer is None:
 
 else:
 
- 
+
 
   hardik_img = image.load_img(temp_file.name, target_size=(500, 500),color_mode='grayscale')
 

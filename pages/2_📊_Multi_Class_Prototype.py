@@ -13,54 +13,99 @@
 # limitations under the License.
 
 import streamlit as st
-from streamlit.logger import get_logger
+"""Create an Image Classification Web App using PyTorch and Streamlit."""
+# import libraries
+from email.mime import image
+from PIL import Image
+import torch
+from torchvision import models, transforms
+import streamlit as st
+import torchxrayvision as xrv
 
-LOGGER = get_logger(__name__)
+from tensorflow.keras.utils import img_to_array
 
 
-def run():
+
+# set title of app
+st.title("Test 2 Classification Application")
+st.write("")
+
+# enable users to upload images for the model to make predictions
+file_up = st.file_uploader("Upload an image", type = "jpg")
+
+
+def predict(image):
+    """Return top 5 predictions ranked by highest probability.
+
+    Parameters
+    ----------
+    :param image: uploaded image
+    :type image: jpg
+    :rtype: list
+    :return: top 5 predictions ranked by highest probability
+    """
+    # create a ResNet model
+    resnet =xrv.models.ResNet(weights="resnet50-res512-all")
+    # transform the input image through resizing, normalization
+    transform = transforms.Compose([
+        transforms.Resize(512),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            mean = [0.485, 0.456, 0.406],
+            std = [0.229, 0.224, 0.225]
+            ),
+        transforms.Grayscale(num_output_channels=1)
+        ])
+
+
+
+    # load the image, pre-process it, and make predictions
+
+    img = Image.open(image)
+    batch_t = torch.unsqueeze(transform(img), 0)
+    resnet.eval()
+    out = resnet(batch_t)
+
+
+    # return the top 5 predictions ranked by highest probabilities
+    prob = torch.nn.functional.softmax(out, dim = 1)[0]*1000
+    _, indices = torch.sort(out, descending = True)
+    return [(xrv.datasets.default_pathologies[idx], prob[idx].item()) for idx in indices[0][:]]
+
+
+if file_up is not None:
+    # display image that user uploaded
+    image = Image.open(file_up)
+    st.image(image, caption = 'Uploaded Image.', use_column_width = True)
+    st.write("")
+    st.write("Just a second ...")
+    labels = predict(file_up)
+
+    # print out the top 5 prediction labels with scores
+    for i in labels:
+        st.write("Prediction (index, name)", i[0], ",   Score: ", i[1])
+
+
+
+
+
     st.set_page_config(
         page_title="ResNet50 Multi Class Classfier",
         page_icon="📊",layout="wide"
     )
 
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 with col1:
     st.header("A cat")
     st.image("https://static.streamlit.io/examples/cat.jpg")
+
+
+
 
 with col2:
     st.header("A dog")
     st.image("https://static.streamlit.io/examples/dog.jpg")
 
-with col3:
-    st.header("An owl")
-    st.image("https://static.streamlit.io/examples/owl.jpg")
 
 
-    st.write("# Welcome to Streamlit! 👋")
-
-    st.sidebar.success("Select a demo above.")
-
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
-
-
-if __name__ == "__main__":
-    run()
