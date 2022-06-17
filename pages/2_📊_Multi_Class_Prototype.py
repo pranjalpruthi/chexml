@@ -26,16 +26,32 @@ from tensorflow.keras.utils import img_to_array
 
 
 
+st.set_page_config(
+        page_title="ResNet50 Multi Class Classfier",
+        page_icon="📊",layout="wide"
+    )
+
+
 # set title of app
 st.title("MultiClass Classification Application")
 st.write("")
+
+
+col1, col2 = st.columns(2)
+with col1:
+    st.header("Please provide image to analyze")
+
 
 # enable users to upload images for the model to make predictions
 file_up = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
 
 
+
+
+with col2:
+    
 def predict(image):
-    """Return top 5 predictions ranked by highest probability.
+     """Return top 5 predictions ranked by highest probability.
 
     Parameters
     ----------
@@ -65,47 +81,8 @@ def predict(image):
     batch_t = torch.unsqueeze(transform(img), 0)
     resnet.eval()
     out = resnet(batch_t)
-
-
-    # return the top 5 predictions ranked by highest probabilities
-    prob = torch.nn.functional.softmax(out, dim = 1)[0]*1000
-    _, indices = torch.sort(out, descending = True)
-    return [(xrv.datasets.default_pathologies[idx], prob[idx].item()) for idx in indices[0][:]]
-
-
-if file_up is not None:
-    # display image that user uploaded
-    image = Image.open(file_up)
-    st.image(image, caption = 'Uploaded Image.', use_column_width = True)
-    st.write("")
-    st.write("Just a second ...")
-    labels = predict(file_up)
-
-    # print out the top 5 prediction labels with scores
-    for i in labels:
-        st.write("Prediction (index, name)", i[0], ",   Score: ", i[1])
-
-
-
-
-
-    st.set_page_config(
-        page_title="ResNet50 Multi Class Classfier",
-        page_icon="📊",layout="wide"
-    )
-
-
-col1, col2 = st.columns(2)
-with col1:
-    st.header("A cat")
-    st.image("https://static.streamlit.io/examples/cat.jpg")
-
-
-
-
-with col2:
-    st.header("A dog")
-    st.image("https://static.streamlit.io/examples/dog.jpg")
+    pred = torch.argmax(out, 1)
+    return pred
 
 
 
