@@ -82,12 +82,16 @@ def predict(image):
 
 
     # transform the input image through resizing, normalization
-    transform = transforms.Compose([    
-        xrv.datasets.XRayCenterCrop(),
-        xrv.datasets.XRayResizer(224),
-        xrv.datasets.XRayNormalizer(),
-        xrv.datasets.YCbCrToGray(),
-        ])
+    transform = transforms.Compose([
+    xrv.datasets.XRayCenterCrop(),
+    transforms.Resize(224),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        mean = [0.485, 0.456, 0.406],
+        std = [0.229, 0.224, 0.225]
+        ),
+    transforms.Grayscale(num_output_channels=1)
+    ])
 
 
 
