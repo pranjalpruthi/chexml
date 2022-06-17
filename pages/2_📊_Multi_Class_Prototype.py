@@ -39,7 +39,7 @@ with col1:
 
 
 # enable users to upload images for the model to make predictions
-    col1.file_up = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
+    col1.xray = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
 
 
 
@@ -96,13 +96,13 @@ def predict(image):
     return [(xrv.datasets.default_pathologies[idx], prob[idx].item()) for idx in indices[0][:]]
 
 
-if file_up is not None:
+if col1.xray is not None:
     # display image that user uploaded
-    image = Image.open(file_up)
+    image = Image.open(col1.xray)
     st.image(image, caption = 'Uploaded Image.', use_column_width = True)
     st.write("")
     st.write("Just a second ...")
-    labels = predict(file_up)
+    labels = predict(col1.xray)
 
     # print out the top 5 prediction labels with scores
     for i in labels:
