@@ -63,7 +63,8 @@ def predict(image):
     :return: top 5 predictions ranked by highest probability
     """
     # create a ResNet model
-    model =xrv.models.ResNet(weights="resnet50-res512-all")
+    model = xrv.baseline_models.chexpert.DenseNet()
+
     # transform the input image through resizing, normalization
     transform = transforms.Compose([
         transforms.Resize(512),
