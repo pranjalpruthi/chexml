@@ -10,3 +10,4 @@ torchvision
 pandas
 torchxrayvision
 scikit-image
+scikit-learn

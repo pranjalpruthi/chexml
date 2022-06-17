@@ -24,6 +24,7 @@ import torchxrayvision as xrv
 
 from tensorflow.keras.utils import img_to_array
 
+import skimage, skimage.io
 from skimage.io import imread
 from skimage.transform import resize
 
