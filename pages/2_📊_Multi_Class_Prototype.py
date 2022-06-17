@@ -27,11 +27,11 @@ from tensorflow.keras.utils import img_to_array
 
 
 # set title of app
-st.title("Test 2 Classification Application")
+st.title("MultiClass Classification Application")
 st.write("")
 
 # enable users to upload images for the model to make predictions
-file_up = st.file_uploader("Upload an image", type = "jpg")
+file_up = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
 
 
 def predict(image):
