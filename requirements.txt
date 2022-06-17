@@ -9,3 +9,4 @@ torch
 torchvision
 pandas
 torchxrayvision
+scikit-image
