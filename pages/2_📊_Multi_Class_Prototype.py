@@ -39,7 +39,7 @@ with col1:
 
 
 # enable users to upload images for the model to make predictions
-file_up = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
+    col1.file_up = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
 
 
 
@@ -63,7 +63,8 @@ def predict(image):
     :return: top 5 predictions ranked by highest probability
     """
     # create a ResNet model
-    model = xrv.models.DenseNet(weights="all")
+    model = xrv.models.DenseNet(weights="densenet121-res224-all")
+
 
 
 
