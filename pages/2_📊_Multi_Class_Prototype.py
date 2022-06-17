@@ -71,12 +71,6 @@ def predict(image):
     img = skimage.io.imread(file_up)
     img = xrv.datasets.normalize(img, 255) 
 
-# Check that images are 2D arrays
-    if len(img.shape) > 2:
-        img = img[:, :, 0]
-    if len(img.shape) < 2:
-        print("error, dimension lower than 2 for image")
-
 # Add color channel
     img = img[None, :, :]
 
