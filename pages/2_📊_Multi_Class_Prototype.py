@@ -108,7 +108,3 @@ if file_up is not None:
 
 
 
-st.set_page_config(
-        page_title="ResNet50 Multi Class Classfier",
-        page_icon="📊",layout="wide"
-    )
