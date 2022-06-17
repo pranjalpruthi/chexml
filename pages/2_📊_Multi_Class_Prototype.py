@@ -74,7 +74,6 @@ def predict(image):
 
     # transform the input image through resizing, normalization
     transform = transforms.Compose([
-    xrv.datasets.XRayCenterCrop(),
     transforms.Resize(224),
     transforms.ToTensor(),
     transforms.Normalize(
