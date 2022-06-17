@@ -85,7 +85,6 @@ def predict(image):
     transform = transforms.Compose([    
         xrv.datasets.XRayCenterCrop(),
         xrv.datasets.XRayResizer(224),
-        xrv.datasets.XRayNormalizer(),
         ])
 
 
