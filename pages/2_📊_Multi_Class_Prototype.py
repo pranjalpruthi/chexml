@@ -68,11 +68,8 @@ def predict(image):
     """
     # create a ResNet model
     model = xrv.models.DenseNet(weights="all")
-    img = skimage.io.imread(file_up)
-    img = xrv.datasets.normalize(img, 255) 
 
 # Add color channel
-    img = img[None, :, :]
 
 
     # transform the input image through resizing, normalization
