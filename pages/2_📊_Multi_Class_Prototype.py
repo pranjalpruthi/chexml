@@ -68,8 +68,18 @@ def predict(image):
     """
     # create a ResNet model
     model = xrv.models.DenseNet(weights="all")
+    img = skimage.io.imread(img_path)
+    img = xrv.datasets.normalize(img, 255) 
+
+# Check that images are 2D arrays
+    if len(img.shape) > 2:
+        img = img[:, :, 0]
+    if len(img.shape) < 2:
+        print("error, dimension lower than 2 for image")
 
 # Add color channel
+    img = img[None, :, :]
+
 
 
     # transform the input image through resizing, normalization
