@@ -1,17 +1,3 @@
-# Copyright 2018-2022 Streamlit Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 from codecs import ascii_encode
 import streamlit as st
 # import libraries
@@ -48,7 +34,7 @@ components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, heigh
 # set title of app
 st.title("MultiClass Classification Application")
 st.write("")
-st.sidebar.markdown("---")
+st.markdown("---")
 
 
 ##lottie
@@ -151,8 +137,14 @@ if col1.xray is not None:
     st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
     labels = predict(col1.xray)
 
+
     # print out the top 5 prediction labels with scores
     st.write("🧐 Focus on prediction labels with score above 50%... for relevance")
+    st.sidebar.info(
+        """
+        ⚠️Caution: Avoid Inserting Large Size or Unrelevent Images 👨‍⚕️.
+"""
+    )
 
     for i in labels:
         st.write("Prediction", i[0], ",  Confidence Score: ", i[1])
