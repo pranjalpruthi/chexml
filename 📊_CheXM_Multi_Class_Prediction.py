@@ -194,8 +194,22 @@ labels = predict(col1.xray)
 df1 = str(labels[0])
 df2= str(labels[1])
 
+fig = plt.figure(figsize = (10, 5))
+
 plt.bar(df2,df1)
 plt.xlabel('Categories')
 plt.ylabel("Values")
 plt.title('Categories Bar Plot')
 plt.show()
+
+def pieChart():
+
+    for i in labels:
+        x = np.array([i[1]])
+    mylabels = [i[0]]
+
+    fig = plt.figure(figsize=(20, 20))
+    plt.pie(x, labels = mylabels)
+
+    st.balloons()
+    st.pyplot(fig)
