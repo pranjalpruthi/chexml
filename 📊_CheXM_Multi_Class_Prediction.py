@@ -141,7 +141,6 @@ lottie_t1 = load_lottieurl(lottie_url_t1)
 
 with st.sidebar:
     st_lottie(lottie_t1, width=199, height=150)
-    st_lottie(lottie_ball)
 
 
 st.sidebar.title("CheXM Multi Class Prediction on CXR Scans")
@@ -169,6 +168,8 @@ st.sidebar.info(
 st.sidebar.markdown(
         "[![this is pranjal's kofi link](https://i.imgur.com/XnWftZ9.png)](https://ko-fi.com/pranjalpruthi)"
     )
+with st.sidebar:
+    st_lottie(lottie_ball)
 
 ####lottie logo####
     
