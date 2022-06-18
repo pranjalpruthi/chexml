@@ -206,10 +206,11 @@ def pieChart():
 
     for i in labels:
         x = np.array([i[1]])
-    mylabels = [i[0]]
+        mylabels = i[0]
 
-    fig = plt.figure(figsize=(20, 20))
-    plt.pie(x, labels = mylabels)
+        fig = plt.figure(figsize=(18, 4))
+        plt.pie(x, labels = mylabels)
 
-    st.balloons()
-    st.pyplot(fig)
+        st.balloons()
+        st.pyplot(fig)
+    return pieChart()
