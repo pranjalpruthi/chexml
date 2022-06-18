@@ -190,6 +190,7 @@ with st.sidebar:
 
 ########lottie############
 
+labels = predict(col1.xray)
 for i in labels:
         x = np.array([i[0]])
         mylabels = [i[:]]
