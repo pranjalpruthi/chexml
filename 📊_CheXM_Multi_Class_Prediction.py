@@ -185,8 +185,8 @@ with st.sidebar:
 
 ########lottie############
 
-
-    for i in labels:
+labels = predict(col1.xray)
+for i in labels:
         Prediction= i[0]
         Confidence_Score = i[1]
 # Create distplot with custom bin_size
