@@ -204,7 +204,7 @@ plt.show()
 
 
 for i in labels:
-        x = np.array([i[:]])
+        x = [i[0]]
         mylabels = [i[:]]
 
         fig = plt.figure(figsize=(10, 4))
