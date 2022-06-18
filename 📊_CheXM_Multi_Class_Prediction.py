@@ -216,13 +216,8 @@ for i in labels:
 st.balloons()
 st.pyplot(fig)
 
-def scatter_plot():
-    #Create numpy array for the visualisation
-    x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
-    y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])    
-    
     fig = plt.figure(figsize=(10, 4))
-    plt.scatter(x, y)
+    plt.scatter(x, y= mylabels)
     
     st.balloons()
     st.pyplot(fig)
