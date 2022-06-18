@@ -224,4 +224,7 @@ plt.scatter( x=df1,y=df2 )
 st.balloons()
 st.pyplot(fig)
 
-st.bar_chart(df2,mylabels)
+chart_data = pd.DataFrame(x,
+    columns=["Enlarged Cardiomediastinum", "Lung Lesion", "Lung Opacity","Infiltration","Effusion","Pneumonia","Cardiomegaly","Atelectasis","Mass",
+    "Nodule","Pneumothorax","Consolidation","Fracture","Edema","Pleural_Thickening","Fibrosis","Emphysema","Hernia"]) 
+st.bar_chart(chart_data)
