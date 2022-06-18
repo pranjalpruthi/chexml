@@ -25,6 +25,8 @@ import streamlit.components.v1 as components
 from streamlit_lottie import st_lottie
 import plotly.figure_factory as ff
 import numpy as np
+import plotly.express as px
+
 
 
 
@@ -203,3 +205,9 @@ fig = ff.create_distplot(hist_data, group_labels, bin_size=[0.1, 0.25, 0.5])
 
 # Plot!
 st.plotly_chart(fig)
+
+
+long_df = px.data.medals_long()
+
+fig = px.bar(long_df, x="nation", y="count", color="medal", title="Long-Form Input")
+fig.show()
