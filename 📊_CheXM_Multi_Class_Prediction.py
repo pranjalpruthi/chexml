@@ -36,63 +36,7 @@ st.title("MultiClass Classification Application")
 st.write("")
 st.sidebar.markdown("---")
 
-st.sidebar.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Picture.png", width=100)
 
-
-
-####lottie functions####
-
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-
-lottie_url_ball ="https://assets4.lottiefiles.com/packages/lf20_dp8xyjzi.json"
-lottie_url_t1 ="https://assets10.lottiefiles.com/packages/lf20_nm1huacl.json"
-
-lottie_ball = load_lottieurl(lottie_url_ball)
-lottie_t1 = load_lottieurl(lottie_url_t1)
-with st.sidebar:
-    st_lottie(lottie_t1, width=199, height=150)
-
-st.sidebar.title("CheXM Multi Class Prediction on CXR Scans")
-st.sidebar.subheader("MultiClass Prediction ")
-st.sidebar.markdown("---")
-st.sidebar.subheader("#Alpha Version Under Development")
-st.sidebar.image("https://img.shields.io/badge/CheXM-v1.0-green.svg", width=100)
-
-components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
-
-st.sidebar.subheader("About")
-st.sidebar.info("CheXM is a deep learning model, It is a convolutional neural network (ResNet50) model that is trained to detect pneumonia in chest X-ray images. This model is trained on 18 Classes CXR X-ray images,  This tool is based on various training datasets  was published by [Paulo Breviglieri](https://www.kaggle.com/datasets/pcbreviglieri/pneumonia-xray-images), a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).")
-st.sidebar.markdown("---")
-
-st.sidebar.markdown ("Credits: This Model is a Modified fork of [Hardik's X-ray ⚕️ Classifier](https://github.com/smarthardik10/Xray-classifier) ")
-
-st.sidebar.image("https://img.shields.io/badge/Version-Alpha-orange.svg")
-#st.sidebar.markdown("CheXM is a deep learning model developed by Pranjal Pruthi. It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. The model is trained on the Chest X-ray images of the American Heart Association (AHA) and the International Chest Imaging Conference (ICIC) databases. The model is trained on the following modalities: CT, MRI, PET, and X-ray.")
-
-st.sidebar.info(
-        """
-        This app is maintained by Pranjal Pruthi. You can learn more about me at
-        [linkedin.com/in/pranjal-pruthi](https://www.linkedin.com/in/pranjal-pruthi).
-"""
-    )
-st.sidebar.markdown(
-        "[![this is pranjal's kofi link](https://i.imgur.com/XnWftZ9.png)](https://ko-fi.com/pranjalpruthi)"
-    )
-
-####lottie logo####
-st_lottie(lottie_ball)
-
-
-#####LOTTIE####
-
-
-
-########lottie############
 
 
 
@@ -177,3 +121,61 @@ if col1.xray is not None:
     for i in labels:
         st.write("Prediction", i[0], ",  Confidence Score: ", i[1])
 
+st.sidebar.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Picture.png", width=100)
+
+
+
+####lottie functions####
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+
+lottie_url_ball ="https://assets4.lottiefiles.com/packages/lf20_dp8xyjzi.json"
+lottie_url_t1 ="https://assets10.lottiefiles.com/packages/lf20_nm1huacl.json"
+
+lottie_ball = load_lottieurl(lottie_url_ball)
+lottie_t1 = load_lottieurl(lottie_url_t1)
+
+with st.sidebar:
+    st_lottie(lottie_t1, width=199, height=150)
+
+st.sidebar.title("CheXM Multi Class Prediction on CXR Scans")
+st.sidebar.subheader("MultiClass Prediction ")
+st.sidebar.markdown("---")
+st.sidebar.subheader("#Alpha Version Under Development")
+st.sidebar.image("https://img.shields.io/badge/CheXM-v1.0-green.svg", width=100)
+
+components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
+
+st.sidebar.subheader("About")
+st.sidebar.info("CheXM is a deep learning model, It is a convolutional neural network (ResNet50) model that is trained to detect pneumonia in chest X-ray images. This model is trained on 18 Classes CXR X-ray images,  This tool is based on various training datasets  was published by [Paulo Breviglieri](https://www.kaggle.com/datasets/pcbreviglieri/pneumonia-xray-images), a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).")
+st.sidebar.markdown("---")
+
+st.sidebar.markdown ("Credits: This Model is a Modified fork of [Hardik's X-ray ⚕️ Classifier](https://github.com/smarthardik10/Xray-classifier) ")
+
+st.sidebar.image("https://img.shields.io/badge/Version-Alpha-orange.svg")
+#st.sidebar.markdown("CheXM is a deep learning model developed by Pranjal Pruthi. It is a convolutional neural network (CNN) model that is trained to detect pneumonia in chest X-ray images. The model is trained on the Chest X-ray images of the American Heart Association (AHA) and the International Chest Imaging Conference (ICIC) databases. The model is trained on the following modalities: CT, MRI, PET, and X-ray.")
+
+st.sidebar.info(
+        """
+        This app is maintained by Pranjal Pruthi. You can learn more about me at
+        [linkedin.com/in/pranjal-pruthi](https://www.linkedin.com/in/pranjal-pruthi).
+"""
+    )
+st.sidebar.markdown(
+        "[![this is pranjal's kofi link](https://i.imgur.com/XnWftZ9.png)](https://ko-fi.com/pranjalpruthi)"
+    )
+
+####lottie logo####
+st_lottie(lottie_ball)
+
+
+#####LOTTIE####
+
+
+
+########lottie############
