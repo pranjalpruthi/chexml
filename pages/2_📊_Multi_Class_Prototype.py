@@ -46,7 +46,7 @@ with col1:
 
 with col2:
     st.header("Predictions")
-    st.image("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png", width=200)
+    st.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Images.png", width=200)
 
 
 
