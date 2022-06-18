@@ -191,13 +191,13 @@ with st.sidebar:
 ########lottie############
 labels = predict(col1.xray)
 
-Confidence_Score = labels[1]
-Predictions= labels[0]
+Confidence_Score = labels[0]
+Predictions= labels[1]
 
 
 rand=np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
-ax.hist(rand, bins=15)
+ax.hist(rand, bins=18, color='#0504aa', alpha=0.7, rwidth=0.85)
 st.pyplot(fig)
 
 chart_data = pd.DataFrame(Confidence_Score,columns=Predictions)
