@@ -216,8 +216,10 @@ for i in labels:
 st.balloons()
 st.pyplot(fig)
 
+
+
 fig = plt.figure(figsize=(10, 4))
-plt.scatter(x, y= mylabels)
+plt.scatter(x, labels= mylabels)
     
 st.balloons()
 st.pyplot(fig)
