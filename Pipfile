@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow = "*"
+pillow = "*"
+numpy = "*"
+h5py = "*"
+streamlit = "*"
+streamlit-lottie = "*"
+torch = "*"
+torchvision = "*"
+pandas = "*"
+torchxrayvision = "*"
+scikit-image = "*"
+scikit-learn = "*"
+plotly-express = "*"
+plotly = "*"
+seaborn = "*"
+matplotlib = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

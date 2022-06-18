@@ -189,23 +189,10 @@ with st.sidebar:
 
 
 ########lottie############
-labels = predict(col1.xray)
-
-df1 = str(labels[0])
-df2= str(labels[1])
-
-fig = plt.figure(figsize = (10, 5))
-
-plt.bar(df2,df1)
-plt.xlabel('Categories')
-plt.ylabel("Values")
-plt.title('Categories Bar Plot')
-plt.show()
-
 
 for i in labels:
         x = np.array([i[0]])
-        mylabels = pd.DataFrame([i[:]])
+        mylabels = [i[:]]
 
         fig = plt.figure(figsize=(10, 4))
         plt.pie(x, labels = mylabels)
