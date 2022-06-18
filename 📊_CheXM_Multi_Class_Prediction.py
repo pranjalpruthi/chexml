@@ -207,7 +207,7 @@ for i in labels:
         x = np.array([i[1]])
         mylabels = i[0]
 
-        fig = plt.figure(figsize=(18, 4))
+        fig = plt.figure(figsize=(18, 18))
         plt.pie(x, labels = mylabels)
 
 st.balloons()
