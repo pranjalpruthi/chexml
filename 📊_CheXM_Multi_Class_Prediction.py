@@ -208,7 +208,7 @@ plt.show()
 st.title("Visuals")
 
 for i in labels:
-        x = np.array([i])
+        x = np.array([i[0:]])
         mylabels = [i[:]]
 
         fig = plt.figure(figsize=(10, 4))
