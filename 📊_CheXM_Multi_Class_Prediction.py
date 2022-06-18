@@ -193,6 +193,7 @@ Confidence_Score = labels[1]
 Predictions= labels[0]
 
 
+
 chart_data = pd.DataFrame(Confidence_Score,columns=Predictions)
 
 st.bar_chart(chart_data)
