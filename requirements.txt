@@ -13,3 +13,4 @@ scikit-image
 scikit-learn
 plotly_express
 plotly
+seaborn
