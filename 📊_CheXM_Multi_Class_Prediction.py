@@ -23,13 +23,13 @@ import torchxrayvision as xrv
 import requests
 import streamlit.components.v1 as components
 from streamlit_lottie import st_lottie
-import numpy as np
+#import numpy as np
 import plotly.figure_factory as ff
 ###
-import seaborn as sns
-import plotly.express as px
+#import seaborn as sns
+#import plotly.express as px
 import matplotlib.pyplot as plt
-import pandas as pd
+#import pandas as pd
 ###
 
 
@@ -191,8 +191,8 @@ with st.sidebar:
 ########lottie############
 labels = predict(col1.xray)
 
-df1 = labels[0]
-df2= labels[1]
+df1 = str(labels[0])
+df2= str(labels[1])
 
 plt.bar(df2,df1)
 plt.xlabel('Categories')
