@@ -202,9 +202,8 @@ plt.ylabel("Values")
 plt.title('Categories Bar Plot')
 plt.show()
 
-def pieChart():
 
-    for i in labels:
+for i in labels:
         x = np.array([i[1]])
         mylabels = i[0]
 
@@ -213,4 +212,3 @@ def pieChart():
 
         st.balloons()
         st.pyplot(fig)
-    return pieChart();
