@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from codecs import ascii_encode
 import streamlit as st
 # import libraries
 from email.mime import image
@@ -207,7 +208,7 @@ plt.show()
 st.title("Visuals")
 
 for i in labels:
-        x = np.array([i[1]])
+        x = np.array([i])
         mylabels = [i[:]]
 
         fig = plt.figure(figsize=(10, 4))
@@ -225,5 +226,6 @@ st.balloons()
 st.pyplot(fig)
 
 chart_data = pd.DataFrame(x,
-    columns=["Enlarged Cardiomediastinum"]) 
+    columns=["Enlarged Cardiomediastinum", "Lung Lesion", "Lung Opacity","Infiltration","Effusion","Pneumonia","Cardiomegaly","Atelectasis","Mass",
+    "Nodule","Pneumothorax","Consolidation","Fracture","Edema","Pleural_Thickening","Fibrosis","Emphysema","Hernia"], ascending=False) 
 st.bar_chart(chart_data)
