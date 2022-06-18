@@ -193,43 +193,4 @@ with st.sidebar:
 
 
 
-########lottie############
-labels = predict(col1.xray)
 
-df1 = str(labels[0])
-df2= str(labels[1])
-
-fig = plt.figure(figsize = (10, 5))
-
-plt.bar(df2,df1)
-plt.xlabel('Categories')
-plt.ylabel("Values")
-plt.title('Categories Bar Plot')
-plt.show()
-
-
-
-st.title("Visuals")
-
-for i in labels:
-        x = np.array([i[1]],Axis=1)
-        mylabels = [i[:]]
-
-        fig = plt.figure(figsize=(10, 4))
-        plt.pie(x, labels = mylabels)
-
-st.balloons()
-st.pyplot(fig)
-
-
-
-fig = plt.figure(figsize=(10, 4))
-plt.scatter( x=df1,y=df2 )
-    
-st.balloons()
-st.pyplot(fig)
-
-chart_data = pd.DataFrame(x,
-    columns=["Enlarged Cardiomediastinum", "Lung Lesion", "Lung Opacity","Infiltration","Effusion","Pneumonia","Cardiomegaly","Atelectasis","Mass",
-    "Nodule","Pneumothorax","Consolidation","Fracture","Edema","Pleural_Thickening","Fibrosis","Emphysema","Hernia"], ascending=False) 
-st.bar_chart(chart_data)
