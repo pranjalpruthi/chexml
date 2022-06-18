@@ -189,6 +189,9 @@ with st.sidebar:
 ########lottie############
 labels = predict(col1.xray)
 
-chart_data = pd.DataFrame(Confidence_Score,columns=Prediction)
+Confidence_Score = labels[1]
+
+
+chart_data = pd.DataFrame(Confidence_Score,columns=labels[0])
 
 st.bar_chart(chart_data)
