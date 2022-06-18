@@ -193,12 +193,9 @@ labels = predict(col1.xray)
 
 df1 = labels[0]
 df2= labels[1]
-df = pd.concat([df1, df2], axis=1)
-chart_data = pd.DataFrame(df1,df2)
 
-st.dataframe(chart_data)
-
-rand=np.random.normal(1, 2, size=20)
-fig, ax = plt.subplots()
-ax.hist(rand, bins=18, color='#0504aa', alpha=0.7, rwidth=0.85)
-st.pyplot(fig)
+plt.bar(df2,df1)
+plt.xlabel('Categories')
+plt.ylabel("Values")
+plt.title('Categories Bar Plot')
+plt.show()
