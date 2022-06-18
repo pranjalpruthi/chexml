@@ -21,6 +21,8 @@ import torch
 from torchvision import models, transforms
 import streamlit as st
 import torchxrayvision as xrv
+import requests
+import streamlit.components.v1 as components
 
 
 
