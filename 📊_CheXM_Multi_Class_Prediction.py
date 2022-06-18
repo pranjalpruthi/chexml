@@ -23,7 +23,7 @@ import torchxrayvision as xrv
 import requests
 import streamlit.components.v1 as components
 from streamlit_lottie import st_lottie
-#import numpy as np
+import numpy as np
 import plotly.figure_factory as ff
 ###
 #import seaborn as sns
@@ -210,5 +210,5 @@ for i in labels:
         fig = plt.figure(figsize=(18, 4))
         plt.pie(x, labels = mylabels)
 
-        st.balloons()
-        st.pyplot(fig)
+st.balloons()
+st.pyplot(fig)
