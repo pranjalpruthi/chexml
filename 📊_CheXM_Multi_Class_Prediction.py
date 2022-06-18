@@ -224,5 +224,5 @@ plt.scatter( x=df1,y=df2 )
 st.balloons()
 st.pyplot(fig)
 
-chart_data = pd.DataFrame(df1,y=df2)
+chart_data = pd.DataFrame(df1,df2)
 st.bar_chart(chart_data)
