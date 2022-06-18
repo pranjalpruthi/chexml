@@ -93,7 +93,7 @@ with col2:
 with col2.empty():
     with st_lottie_spinner(lottie_progress,width=101,height=101, loop=True, key="progress"):
         time.sleep(10)
-    st_lottie(lottie_success,width=45,height=45, loop=True, key="success")
+    st_lottie(lottie_success,width=101,height=101, loop=True, key="success")
 
 
 
