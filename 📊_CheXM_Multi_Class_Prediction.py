@@ -27,7 +27,7 @@ import numpy as np
 import plotly.figure_factory as ff
 ###
 #import seaborn as sns
-#import plotly.express as px
+import plotly.express as px
 import matplotlib.pyplot as plt
 import pandas as pd
 ###
