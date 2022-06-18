@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import streamlit as st
-"""Create an Image Classification Web App using PyTorch and Streamlit."""
 # import libraries
 from email.mime import image
 from PIL import Image
@@ -27,6 +26,7 @@ from streamlit_lottie import st_lottie
 
 
 
+components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
 
 
 
@@ -52,7 +52,6 @@ with col1:
     col1.xray = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
 
 
-components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
 
 
 with col2:
