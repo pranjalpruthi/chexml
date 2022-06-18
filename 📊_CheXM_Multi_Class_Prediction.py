@@ -91,9 +91,9 @@ with col2:
     st.header("Predictions")
     st.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Images.png", width=200)
 with col2.empty():
-    with st_lottie_spinner(lottie_progress,width=20,height=20, loop=True, key="progress"):
-        time.sleep(5)
-    st_lottie(lottie_success,width=20,height=20, loop=False, key="success")
+    with st_lottie_spinner(lottie_progress,width=90,height=90, loop=True, key="progress"):
+        time.sleep(10)
+    st_lottie(lottie_success,width=45,height=45, loop=False, key="success")
 
 
 
