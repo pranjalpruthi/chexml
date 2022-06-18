@@ -205,7 +205,7 @@ plt.show()
 
 for i in labels:
         x = np.array([i[1]])
-        mylabels =df1
+        mylabels = labels[i[0]]
 
         fig = plt.figure(figsize=(18, 18))
         plt.pie(x, labels = mylabels)
