@@ -31,6 +31,9 @@ import plotly.figure_factory as ff
 import plotly.express as px
 import matplotlib.pyplot as plt
 import pandas as pd
+import time
+from streamlit_lottie import st_lottie_spinner
+
 ###
 
 
@@ -48,7 +51,26 @@ st.write("")
 st.sidebar.markdown("---")
 
 
+##lottie
 
+####lottie functions####
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+
+lottie_url_ball ="https://assets4.lottiefiles.com/packages/lf20_dp8xyjzi.json"
+lottie_url_t1 ="https://assets10.lottiefiles.com/packages/lf20_nm1huacl.json"
+lottie_url_progress = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_lw4fol0h.json")
+lottie_url_success = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_0unee7cs.json")
+
+lottie_ball = load_lottieurl(lottie_url_ball)
+lottie_t1 = load_lottieurl(lottie_url_t1)
+
+##lottie
 
 
 
@@ -68,7 +90,10 @@ with col1:
 with col2:
     st.header("Predictions")
     st.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Images.png", width=200)
-
+with col2.empty():
+    with st_lottie_spinner(lottie_progress,width=20,height=20, loop=True, key="progress"):
+        time.sleep(5)
+    st_lottie(lottie_success,width=20,height=20, loop=False, key="success")
 
 
 
@@ -134,21 +159,8 @@ if col1.xray is not None:
 
 
 
+###SIdebar
 
-####lottie functions####
-
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-
-lottie_url_ball ="https://assets4.lottiefiles.com/packages/lf20_dp8xyjzi.json"
-lottie_url_t1 ="https://assets10.lottiefiles.com/packages/lf20_nm1huacl.json"
-
-lottie_ball = load_lottieurl(lottie_url_ball)
-lottie_t1 = load_lottieurl(lottie_url_t1)
 
 with st.sidebar:
     st_lottie(lottie_t1, width=199, height=150)
