@@ -64,7 +64,7 @@ def load_lottieurl(url: str):
 
 lottie_url_ball ="https://assets4.lottiefiles.com/packages/lf20_dp8xyjzi.json"
 lottie_url_t1 ="https://assets10.lottiefiles.com/packages/lf20_nm1huacl.json"
-lottie_progress = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_lw4fol0h.json")
+lottie_progress = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_h4th9ofg.json")
 lottie_success = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_0unee7cs.json")
 
 lottie_ball = load_lottieurl(lottie_url_ball)
@@ -91,9 +91,9 @@ with col2:
     st.header("Predictions")
     st.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Images.png", width=200)
 with col2.empty():
-    with st_lottie_spinner(lottie_progress,width=90,height=90, loop=True, key="progress"):
+    with st_lottie_spinner(lottie_progress,width=101,height=101, loop=True, key="progress"):
         time.sleep(10)
-    st_lottie(lottie_success,width=45,height=45, loop=False, key="success")
+    st_lottie(lottie_success,width=45,height=45, loop=True, key="success")
 
 
 
