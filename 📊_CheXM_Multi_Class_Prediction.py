@@ -186,11 +186,9 @@ with st.sidebar:
 ########lottie############
 
 
-
-Prediction= i[0]
-
-Confidence_Score = i[1]
-
+    for i in labels:
+        Prediction= i[0]
+        Confidence_Score = i[1]
 # Create distplot with custom bin_size
 fig = ff.create_distplot(Prediction, Confidence_Score, bin_size=[0.5])
 
