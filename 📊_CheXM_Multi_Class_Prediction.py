@@ -216,8 +216,8 @@ for i in labels:
 st.balloons()
 st.pyplot(fig)
 
-    fig = plt.figure(figsize=(10, 4))
-    plt.scatter(x, y= mylabels)
+fig = plt.figure(figsize=(10, 4))
+plt.scatter(x, y= mylabels)
     
-    st.balloons()
-    st.pyplot(fig)
+st.balloons()
+st.pyplot(fig)
