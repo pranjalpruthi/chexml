@@ -23,6 +23,7 @@ import streamlit as st
 import torchxrayvision as xrv
 import requests
 import streamlit.components.v1 as components
+from streamlit_lottie import st_lottie
 
 
 
