@@ -225,6 +225,5 @@ st.balloons()
 st.pyplot(fig)
 
 chart_data = pd.DataFrame(x,
-    columns=["Enlarged Cardiomediastinum", "Lung Lesion", "Lung Opacity","Infiltration","Effusion","Pneumonia","Cardiomegaly","Atelectasis","Mass",
-    "Nodule","Pneumothorax","Consolidation","Fracture","Edema","Pleural_Thickening","Fibrosis","Emphysema","Hernia"]) 
+    columns=["Enlarged Cardiomediastinum"]) 
 st.bar_chart(chart_data)
