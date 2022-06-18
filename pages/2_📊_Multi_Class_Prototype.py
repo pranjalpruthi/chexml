@@ -47,7 +47,7 @@ with col1:
 with col2:
     st.header("Predictions")
     st.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Images.png", width=200)
-
+    st.sidebar.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Picture.png", width=200)
 
 
 
