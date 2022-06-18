@@ -186,19 +186,8 @@ with st.sidebar:
 
 
 ########lottie############
-
-data_canada = px.data.gapminder().query("country == 'Canada'")
-fig = px.bar(data_canada, x='year', y='pop')
-fig.show()
-
-
-
 labels = predict(col1.xray)
-for i in labels:
-        Prediction= i[0]
-        Confidence_Score = i[1]
-# Create distplot with custom bin_size
-fig = ff.create_distplot(Prediction, Confidence_Score)
 
-# Plot!
-st.plotly_chart(fig, use_container_width=True)
+chart_data = pd.DataFrame(Confidence_Score,columns=Prediction)
+
+st.bar_chart(chart_data)
