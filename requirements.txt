@@ -14,3 +14,4 @@ scikit-learn
 plotly_express
 plotly
 seaborn
+matplotlib

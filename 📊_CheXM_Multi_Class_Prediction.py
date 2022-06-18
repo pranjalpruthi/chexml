@@ -26,7 +26,9 @@ from streamlit_lottie import st_lottie
 import numpy as np
 import plotly.figure_factory as ff
 ###
+import seaborn as sns
 import plotly.express as px
+import matplotlib.pyplot as plt
 import pandas as pd
 ###
 
@@ -193,7 +195,11 @@ Confidence_Score = labels[1]
 Predictions= labels[0]
 
 
+rand=np.random.normal(1, 2, size=20)
+fig, ax = plt.subplots()
+ax.hist(rand, bins=15)
+st.pyplot(fig)
 
 chart_data = pd.DataFrame(Confidence_Score,columns=Predictions)
 
-st.bar_chart(chart_data)
+st.dataframe(chart_data)
