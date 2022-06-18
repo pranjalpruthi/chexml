@@ -64,8 +64,8 @@ def load_lottieurl(url: str):
 
 lottie_url_ball ="https://assets4.lottiefiles.com/packages/lf20_dp8xyjzi.json"
 lottie_url_t1 ="https://assets10.lottiefiles.com/packages/lf20_nm1huacl.json"
-lottie_url_progress = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_lw4fol0h.json")
-lottie_url_success = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_0unee7cs.json")
+lottie_progress = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_lw4fol0h.json")
+lottie_success = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_0unee7cs.json")
 
 lottie_ball = load_lottieurl(lottie_url_ball)
 lottie_t1 = load_lottieurl(lottie_url_t1)
