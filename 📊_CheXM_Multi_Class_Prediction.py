@@ -204,8 +204,8 @@ plt.show()
 
 
 for i in labels:
-        x = [i[0]]
-        mylabels = [i[:]]
+        x = np.array([i[0]])
+        mylabels = pd.DataFrame([i[:]])
 
         fig = plt.figure(figsize=(10, 4))
         plt.pie(x, labels = mylabels)
