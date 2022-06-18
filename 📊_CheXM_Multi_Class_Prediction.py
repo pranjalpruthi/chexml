@@ -113,7 +113,7 @@ if col1.xray is not None:
     st.write("")
     st.markdown("The image was successfully uploaded.")
     st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
-    labels = predict(file_up)
+    labels = predict(col1.xray)
 
     # print out the top 5 prediction labels with scores
     st.write("🧐 Focus on prediction labels with score above 50%... for relevance")
