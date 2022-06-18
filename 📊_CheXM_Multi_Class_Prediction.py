@@ -68,7 +68,7 @@ with col1:
 
 
 # enable users to upload images for the model to make predictions
-    col1.xray = st.file_uploader("Upload an image", type = ["jpg", "png","jpeg"])
+    col1.xray = st.file_uploader("Upload an 🩻👇 image", type = ["jpg", "png","jpeg"])
 
 
 
@@ -140,7 +140,7 @@ if col1.xray is not None:
 
     # print out the top 5 prediction labels with scores
     st.write("🧐 Focus on prediction labels with score above 50%... for relevance")
-    st.sidebar.info(
+    st.info(
         """
         ⚠️Caution: Avoid Inserting Large Size or Unrelevent Images 👨‍⚕️.
 """
