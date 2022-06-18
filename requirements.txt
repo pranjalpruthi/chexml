@@ -11,3 +11,5 @@ pandas
 torchxrayvision
 scikit-image
 scikit-learn
+plotly_express
+plotly
