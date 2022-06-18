@@ -190,7 +190,7 @@ for i in labels:
         Prediction= i[0]
         Confidence_Score = i[1]
 # Create distplot with custom bin_size
-fig = ff.create_distplot(Prediction, Confidence_Score, bins=20])
+fig = ff.create_distplot(Prediction, Confidence_Score, bins=20)
 
 # Plot!
 st.plotly_chart(fig, use_container_width=True)
