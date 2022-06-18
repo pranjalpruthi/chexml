@@ -25,7 +25,9 @@ import streamlit.components.v1 as components
 from streamlit_lottie import st_lottie
 import numpy as np
 import plotly.figure_factory as ff
-
+###
+import plotly.express as px
+###
 
 
 
@@ -185,7 +187,6 @@ with st.sidebar:
 
 ########lottie############
 
-import plotly.express as px
 data_canada = px.data.gapminder().query("country == 'Canada'")
 fig = px.bar(data_canada, x='year', y='pop')
 fig.show()
