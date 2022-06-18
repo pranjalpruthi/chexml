@@ -219,7 +219,7 @@ st.pyplot(fig)
 
 
 fig = plt.figure(figsize=(10, 4))
-plt.scatter(x,y=df2, labels= mylabels)
+plt.scatter( x=df1,y=df2 )
     
 st.balloons()
 st.pyplot(fig)
