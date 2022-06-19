@@ -29,8 +29,7 @@ def run():
     st.sidebar.success("Select a demo above.")
 
 
-st.warning(""" ###So, what do these categories mean? This is actually explained in the paper linked on the [Know More](https://share.streamlit.io/pranjalpruthi/chest-xray-analysis-ml/main/%F0%9F%93%8A_CheXM_Multi_Class_Prediction.py/Know_More!!!) Section. **👈."):
-
+st.warning(""" Type of Diseases :
 - AORTIC ENLARGEMENT : 
 - Aortic enlargement is known as a sign of an aortic aneurysm. This condition often occurs in the ascending aorta.
 - In general, the term aneurysm is used when the axial diameter is >5.0 cm for the ascending aorta and >4.0 cm for the descending aorta.
