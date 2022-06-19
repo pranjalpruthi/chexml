@@ -138,7 +138,7 @@ if col1.xray is not None:
 
 
     # print out the top 5 prediction labels with scores
-    st.write("🧐 Focus on prediction labels with score above 50%... for relevance")
+    st.info("🧐 Focus on prediction labels with score above 50%... for relevance")
     st.warning(
         """
         ⚠️Caution: Avoid Inserting Large Size or Unrelevent Images 👨‍⚕️.
