@@ -189,7 +189,7 @@ with st.sidebar:
     
 
 #####LOTTIE####
-st.info(""" ###So, what do these categories mean? This is actually explained in the paper linked on the Know More Section. **👈."):
+st.info(""" ###So, what do these categories mean? This is actually explained in the paper linked on the [Know More](https://share.streamlit.io/pranjalpruthi/chest-xray-analysis-ml/main/%F0%9F%93%8A_CheXM_Multi_Class_Prediction.py/Know_More!!!) Section. **👈."):
 
 - Aortic enlargement: "An abnormal bulge that occurs in the wall of the major blood vessel."
 
