@@ -13,20 +13,15 @@
 # limitations under the License.
 
 import streamlit as st
-from streamlit.logger import get_logger
-
-LOGGER = get_logger(__name__)
 
 
-def run():
-    st.set_page_config(
-        page_title="👨‍⚕️ Know More",
-        page_icon="👋",
+
+st.set_page_config(
+        page_title="Know More",
+        page_icon="👨‍⚕️ ",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
 
-    st.sidebar.success("Select a demo above.")
 
 
 st.warning(""" Type of Diseases :
@@ -109,6 +104,3 @@ st.warning(""" Type of Diseases :
 
 """)
 
-
-if __name__ == "__main__":
-    run()
