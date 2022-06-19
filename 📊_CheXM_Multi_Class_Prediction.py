@@ -104,6 +104,7 @@ def predict(image):
     # transform the input image through resizing, normalization
     transform = transforms.Compose([
     transforms.Resize(512),
+    transforms.ToTensor(),
     transforms.Normalize((0.5), (0.5)),
     transforms.Grayscale(num_output_channels=1)
     ])
