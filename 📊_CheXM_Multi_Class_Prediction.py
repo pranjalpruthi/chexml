@@ -189,7 +189,36 @@ with st.sidebar:
     
 
 #####LOTTIE####
+st.info(""" ###So, what do these categories mean? This is actually explained in the paper linked on the Know More Section. **👈."):
 
+- Aortic enlargement: "An abnormal bulge that occurs in the wall of the major blood vessel."
+
+- Atelectasis: "Collapse of a part of the lung due to a decrease in the amount of air in the alveoli resulting in volume loss and increased density." (see also Merck Manual)
+
+- Calcification: "Deposition of calcium salts in the lung." - one article I looked at says that "[...] calcifications occur in a damaged lung following an inflammatory process such as infection (tuberculosis, histoplasmosis, Pneumocystis carnii), bleeding or pulmonary infarction" (Bendayan et al. 2000)
+
+- Cardiomegaly: "Enlargement of the heart, occurs when the heart of an adult patient is larger than normal and the cardiothoracic ratio is greater than 0.5."
+
+- Consolidation: "Any pathologic process that fills the alveoli with fluid, pus, blood, cells (including tumor cells) or other substances resulting in lobar, diffuse or multifocal ill-defined opacities."
+
+- ILD: "Interstitial lung disease (ILD) Involvement of the supporting tissue of the lung parenchyma resulting in fine or coarse reticular opacities or small nodules." (see also Merck Manual)
+
+- Infiltration: "An abnormal substance that accumulates gradually within cells or body tissues or any substance or type of cell that occurs within or spreads as through the interstices (interstitium and/or alveoli) of the lung, that is foreign to the lung, or that accumulates in greater than normal quantity within it."
+
+- Lung Opacity: "Any abnormal focal or generalized opacity or opacities in lung fields (blanket tag including but not limited to consolidation, cavity, fibrosis, nodule, mass, calcification, interstitial thickening, etc.)."
+
+- Nodule/Mass: "Any space occupying lesion either solitary or multiple."
+
+- Other lesion: "Other lesions that are not on the list of findings or abnormalities mentioned above."
+
+- Pleural effusion: "Abnormal accumulations of fluid within the pleural space." (see also Merck Manual)
+
+- Pleural thickening: "Any form of thickening involving either the parietal or visceral pleura."
+
+- Pneumothorax: "The presence of gas (air) in the pleural space." (see also the Merck Manual)
+
+- Pulmonary fibrosis: "An excess of fibrotic tissue in the lung."
+""")
 
 
 
