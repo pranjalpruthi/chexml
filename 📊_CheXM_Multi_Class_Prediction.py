@@ -94,7 +94,7 @@ def predict(image):
     :return: top 5 predictions ranked by highest probability
     """
     # create a ResNet model
-    model = xrv.models.DenseNet(weights="densenet121-res224-all")
+    model =  xrv.models.DenseNet(weights="densenet121-res224-all")
 
 
 
