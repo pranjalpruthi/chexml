@@ -1,6 +1,5 @@
 import streamlit as st
 # import libraries
-from email.mime import image
 from PIL import Image
 import torch
 from torchvision import models, transforms
