@@ -1,4 +1,3 @@
-from codecs import ascii_encode
 import streamlit as st
 # import libraries
 from email.mime import image
@@ -33,7 +32,7 @@ import torchvision.transforms
 
 
 
-components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
+st.sidebar.components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
 
 
 
