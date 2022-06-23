@@ -1,7 +1,6 @@
 from codecs import ascii_encode
 import streamlit as st
 # import libraries
-from email.mime import image
 from PIL import Image
 import torch
 from torchvision import models, transforms
@@ -125,11 +124,11 @@ def predict(image):
     prob = torch.nn.functional.softmax(out, dim = 1)[0]*1000
     _, indices = torch.sort(out, descending = True)
     return [(xrv.datasets.default_pathologies[idx], prob[idx].item()) for idx in indices[0][:]]
-with col1:
-    if col1.xray is not None:
+with col2:
+ if col1.xray is not None:
     # display image that user uploaded
-        image = Image.open(col1.xray)
-        st.image(image, caption = 'Uploaded Image.', use_column_width = True)
+    image = Image.open(col1.xray)
+    st.image(image, caption = 'Uploaded Image.', use_column_width = True)
 
 with col2:
 
