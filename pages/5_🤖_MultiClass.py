@@ -69,7 +69,11 @@ lottie_t1 = load_lottieurl(lottie_url_t1)
 
 
 # enable users to upload images for the model to make predictions
-
+st.warning(
+            """
+            ⚠️Caution: Avoid Inserting Large Size or Unrelevent Images 👨‍⚕️.
+    """
+        )
 xray = st.file_uploader("Upload an 🩻👇 image", type = ["jpg", "png","jpeg"])
 
 
@@ -102,6 +106,11 @@ with torch.no_grad():
         k: float(v*100)
         for k, v in zip(xrv.datasets.default_pathologies, preds[0].detach().numpy())
     }
+
+st.info("🧐 Following shows Prediction labels with corresponding confidence score... for relevance")
+
+st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
+
 st.write(output)
 
 
@@ -120,6 +129,7 @@ img = Image.open(xray)
 st.image(img, caption = 'Uploaded Image.', use_column_width = True)
 st.write("")
 st.markdown("The image was successfully uploaded.")
+st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
 
 
 
