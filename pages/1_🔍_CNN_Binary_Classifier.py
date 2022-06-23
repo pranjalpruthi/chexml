@@ -52,7 +52,7 @@ lottie_url_t1 ="https://assets10.lottiefiles.com/packages/lf20_nm1huacl.json"
 
 lottie_ball = load_lottieurl(lottie_url_ball)
 lottie_t1 = load_lottieurl(lottie_url_t1)
-
+lg_2="lg2.json"
 ######################
 # Page Title
 ######################
@@ -93,6 +93,10 @@ st.sidebar.markdown(
 
 with st.sidebar:
   st_lottie(lottie_ball)
+  st_lottie(lg_2)
+
+
+
 
 
 #####LOTTIE####
