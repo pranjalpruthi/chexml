@@ -31,7 +31,7 @@ import torchvision.transforms
 
 
 
-st.components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
+components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
 
 
 
