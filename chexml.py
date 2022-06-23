@@ -162,7 +162,7 @@ st.sidebar.subheader("MultiClass Prediction ")
 st.sidebar.markdown("---")
 st.sidebar.subheader("#Alpha Version Under Development")
 st.sidebar.image("https://img.shields.io/badge/CheXM-v1.0-green.svg", width=100)
-
+st.sidebar.image("https://imgur.com/a/7PPOWM1", width=200)
 
 st.sidebar.subheader("About")
 st.sidebar.info("CheXM is a deep learning model, It is a convolutional neural network (ResNet50) model that is trained to detect pneumonia in chest X-ray images. This model is trained on 18 Classes CXR X-ray images,  This tool is based on various training datasets  was published by [Paulo Breviglieri](https://www.kaggle.com/datasets/pcbreviglieri/pneumonia-xray-images), a revised version of [ Paul Mooney's most popular Dataset Published in Cell Journal](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).")
