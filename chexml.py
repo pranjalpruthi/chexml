@@ -1,5 +1,6 @@
 from codecs import ascii_encode
 import streamlit as st
+
 # import libraries
 from PIL import Image
 import torch
@@ -124,20 +125,21 @@ def predict(image):
     prob = torch.nn.functional.softmax(out, dim = 1)[0]*1000
     _, indices = torch.sort(out, descending = True)
     return [(xrv.datasets.default_pathologies[idx], prob[idx].item()) for idx in indices[0][:]]
-with col2:
- if col1.xray is not None:
+
+
+if col1.xray is not None:
     # display image that user uploaded
     image = Image.open(col1.xray)
     st.image(image, caption = 'Uploaded Image.', use_column_width = True)
 
-with col2:
 
     
-        st.write("")
-        st.markdown("The image was successfully uploaded.")
-        st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
-        labels = predict(col1.xray)
+    st.write("")
+    st.markdown("The image was successfully uploaded.")
+    st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
+    labels = predict(col1.xray)
 
+with col2:
 
     # print out the top 5 prediction labels with scores
         st.info("🧐 Focus on prediction labels with score above 50%... for relevance")
