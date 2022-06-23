@@ -75,7 +75,6 @@ with col1:
 
 with col2:
     st.header("Predictions")
-    st.image("https://www.pngall.com/wp-content/uploads/6/X-Ray-PNG-Images.png", width=200)
 with col2.empty():
     with st_lottie_spinner(lottie_progress,width=101,height=101, loop=True, key="progress"):
         time.sleep(10)
