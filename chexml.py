@@ -126,27 +126,28 @@ def predict(image):
     _, indices = torch.sort(out, descending = True)
     return [(xrv.datasets.default_pathologies[idx], prob[idx].item()) for idx in indices[0][:]]
 
+with col2:
 
-if col1.xray is not None:
+    if col1.xray is not None:
     # display image that user uploaded
-    image = Image.open(col1.xray)
-    st.image(image, caption = 'Uploaded Image.', use_column_width = True)
-    st.write("")
-    st.markdown("The image was successfully uploaded.")
-    st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
-    labels = predict(col1.xray)
+        image = Image.open(col1.xray)
+        st.image(image, caption = 'Uploaded Image.', use_column_width = True)
+        st.write("")
+        st.markdown("The image was successfully uploaded.")
+        st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
+        labels = predict(col1.xray)
 
 
     # print out the top 5 prediction labels with scores
-    st.info("🧐 Focus on prediction labels with score above 50%... for relevance")
-    st.warning(
-        """
-        ⚠️Caution: Avoid Inserting Large Size or Unrelevent Images 👨‍⚕️.
-"""
-    )
+        st.info("🧐 Focus on prediction labels with score above 50%... for relevance")
+        st.warning(
+            """
+            ⚠️Caution: Avoid Inserting Large Size or Unrelevent Images 👨‍⚕️.
+    """
+        )
 
-    for i in labels:
-        st.write("Prediction", i[0], ",  Confidence Score: ", i[1])
+        for i in labels:
+            st.write("Prediction", i[0], ",  Confidence Score: ", i[1])
 
 
 
