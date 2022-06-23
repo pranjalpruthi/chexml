@@ -125,13 +125,15 @@ def predict(image):
     prob = torch.nn.functional.softmax(out, dim = 1)[0]*1000
     _, indices = torch.sort(out, descending = True)
     return [(xrv.datasets.default_pathologies[idx], prob[idx].item()) for idx in indices[0][:]]
-
-with col2:
-
+with col1:
     if col1.xray is not None:
     # display image that user uploaded
         image = Image.open(col1.xray)
         st.image(image, caption = 'Uploaded Image.', use_column_width = True)
+
+with col2:
+
+    
         st.write("")
         st.markdown("The image was successfully uploaded.")
         st.write("💁🏻‍♂️ Just a second ...🤖 Model is predicting...")
