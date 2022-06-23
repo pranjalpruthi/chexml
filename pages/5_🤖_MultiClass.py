@@ -31,14 +31,13 @@ import torchvision.transforms
 
 
 
-st.sidebar.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
+st.components.iframe("https://giphy.com/embed/WfZBqVVywQdd1OloEd", width=300, height=300)
 
 
 
 
 # set title of app
 st.title("MultiClass Classification Application")
-st.write("")
 st.markdown("---")
 
 
