@@ -65,17 +65,17 @@ lottie_t1 = load_lottieurl(lottie_url_t1)
 col1, col2 = st.columns(2)
 with col1:
     st.header("Please provide an image to anaylze")
-
-
-# enable users to upload images for the model to make predictions
-    col1.xray = st.file_uploader("Upload an 🩻👇 image", type = ["jpg", "png","jpeg"])
-
-st.info("🧐 Focus on prediction labels with score above 50%... for relevance")
-st.warning(
+    st.info("🧐 Focus on prediction labels with score above 50%... for relevance")
+    st.warning(
             """
             ⚠️Caution: Avoid Inserting Large Size or Unrelevent Images 👨‍⚕️.
     """
         )
+
+# enable users to upload images for the model to make predictions
+    col1.xray = st.file_uploader("Upload an 🩻👇 image", type = ["jpg", "png","jpeg"])
+
+
 
 
 
