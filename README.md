@@ -1,9 +1,11 @@
 # chest-xray-analysis-ml
 Detection of Disease from Chest X-Ray using Machine Learning 
- 
+App url:"https://share.streamlit.io/pranjalpruthi/chexml/main/chexml.py"
 Figure: Multi Class Classification Open Source Web App for various platforms (Git Repo: “https://github.com/pranjalpruthi/chexml”)
 
-![image](https://user-images.githubusercontent.com/47497714/177028914-8aaef44b-5d1e-42f4-86cf-d83dd408270f.png)
+
+![image](https://user-images.githubusercontent.com/47497714/177029084-fbc03255-2c68-460f-8b0c-460b8e9a8229.png)
+
 
 
 
