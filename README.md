@@ -1,5 +1,6 @@
 # chest-xray-analysis-ml
-Detection of Disease from Chest X-Ray using Machine Learning 
+
+## Detection of Disease from Chest X-Ray using Machine Learning 
 App url:"https://share.streamlit.io/pranjalpruthi/chexml/main/chexml.py"
 Figure: Multi Class Classification Open Source Web App for various platforms (Git Repo: “https://github.com/pranjalpruthi/chexml”)
 
@@ -9,9 +10,13 @@ Figure: Multi Class Classification Open Source Web App for various platforms (Gi
 
 
 
-Lung diseases are the primary cause of death in most countries. The chest X-rays, CT scans, and MRI scans are few available diagnosis methods for detecting and analyzing the disease severity. Among the diagnoses stated, X-ray is the most commonly used modality. 
+#### Lung diseases are the primary cause of death in most countries. The chest X-rays, CT scans, and MRI scans are few available diagnosis methods for detecting and analyzing the disease severity. Among the diagnoses stated, X-ray is the most commonly used modality. 
+
+### The detection of such abnormalities in chest x-ray images using deep learning state-of-the-art algorithms could have a significant impact on the early detection of lung-related disorders not only being efficient but also time and life-saving where medical experts and doctors are not easily accessible, especially in rural areas town’s villages.
 
 The use of medical imaging with deep learning for classification is the current academic research direction & recently while COVID-19 is also a kind of pneumonia caused by coronavirus. Chest X-rays can help in early detection and isolation of patients.
+
+
 
 TB is a deadly disease that is responsible for a million death according to World Health Organization Global Tuberculosis report . Mantoux tuberculin skin tests (TST) or TB blood tests are conducted to detect it, but these tests are expensive. Chest X-rays are cheap and fast that can help in pulmonary TB detection
 
