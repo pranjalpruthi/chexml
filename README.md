@@ -1,6 +1,6 @@
 # chest-xray-analysis-ml
 
-## Detection of Disease from Chest X-Ray using Machine Learning 
+## DEEP LEARNING APPLICATION ON RESNET50 MODEL FOR LUNG DISEASE ANALYSIS IN CHEST X-RAY RADIOGRAPHS 
 App url:"https://share.streamlit.io/pranjalpruthi/chexml/main/chexml.py"
 Figure: Multi Class Classification Open Source Web App for various platforms (Git Repo: “https://github.com/pranjalpruthi/chexml”)
 
